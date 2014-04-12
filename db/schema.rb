@@ -11,7 +11,49 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131125143345) do
+ActiveRecord::Schema.define(:version => 20140411223110) do
+
+  create_table "cell_leaders", :force => true do |t|
+    t.string   "name"
+    t.string   "mobile"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "pastors", :force => true do |t|
+    t.string   "name"
+    t.string   "mobile"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "student_cards", :force => true do |t|
+    t.integer  "student_id"
+    t.string   "attendance"
+    t.float    "days_journaled"
+    t.float    "days_prayed"
+    t.boolean  "attended_cell"
+    t.boolean  "attended_church"
+    t.float    "assignment_one"
+    t.float    "assignment_two"
+    t.float    "memory_verse"
+    t.float    "test"
+    t.float    "bible_reading"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "student_cards", ["student_id"], :name => "index_student_cards_on_student_id"
+
+  create_table "students", :force => true do |t|
+    t.string   "name"
+    t.string   "mobile"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

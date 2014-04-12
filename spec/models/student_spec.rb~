@@ -1,0 +1,11 @@
+require 'spec_helper'
+
+describe "Student" do
+  context "when not valid" do
+    it "should have a name" do
+      @a = Student.new()
+      expect(@a.valid?).to eq(false)
+      expect(@a.errors[:name]).to eq(["can't be blank"])
+    end
+  end
+end

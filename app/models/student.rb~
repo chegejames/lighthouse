@@ -1,0 +1,7 @@
+class Student < ActiveRecord::Base
+  attr_accessible :email, :mobile, :name
+  has_many :student_cards
+
+  validates :email, :mobile, :name, presence: true
+  validates :email, uniqueness: true
+end

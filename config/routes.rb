@@ -1,4 +1,16 @@
 Lighthouse::Application.routes.draw do
+  resources :student_cards
+
+
+  resources :cell_leaders
+
+
+  resources :students
+
+
+  resources :pastors
+
+
   get "index/indexpage"
 
   devise_for :users

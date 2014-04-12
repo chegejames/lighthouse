@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  student: 
+  attendance: MyString
+  days_journaled: 1.5
+  days_prayed: 1.5
+  attended_cell: false
+  attended_church: false
+  assignment_one: 1.5
+  assignment_two: 1.5
+  memory_verse: 1.5
+  test: 1.5
+  bible_reading: 1.5
+
+two:
+  student: 
+  attendance: MyString
+  days_journaled: 1.5
+  days_prayed: 1.5
+  attended_cell: false
+  attended_church: false
+  assignment_one: 1.5
+  assignment_two: 1.5
+  memory_verse: 1.5
+  test: 1.5
+  bible_reading: 1.5

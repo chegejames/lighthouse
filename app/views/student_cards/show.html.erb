@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student:</b>
+  <%= @student_card.student %>
+</p>
+
+<p>
+  <b>Attendance:</b>
+  <%= @student_card.attendance %>
+</p>
+
+<p>
+  <b>Days journaled:</b>
+  <%= @student_card.days_journaled %>
+</p>
+
+<p>
+  <b>Days prayed:</b>
+  <%= @student_card.days_prayed %>
+</p>
+
+<p>
+  <b>Attended cell:</b>
+  <%= @student_card.attended_cell %>
+</p>
+
+<p>
+  <b>Attended church:</b>
+  <%= @student_card.attended_church %>
+</p>
+
+<p>
+  <b>Assignment one:</b>
+  <%= @student_card.assignment_one %>
+</p>
+
+<p>
+  <b>Assignment two:</b>
+  <%= @student_card.assignment_two %>
+</p>
+
+<p>
+  <b>Memory verse:</b>
+  <%= @student_card.memory_verse %>
+</p>
+
+<p>
+  <b>Test:</b>
+  <%= @student_card.test %>
+</p>
+
+<p>
+  <b>Bible reading:</b>
+  <%= @student_card.bible_reading %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_card_path(@student_card) %> |
+<%= link_to 'Back', student_cards_path %>

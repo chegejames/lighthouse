@@ -1,0 +1,43 @@
+<h1>Listing student_cards</h1>
+
+<table>
+  <tr>
+    <th>Student</th>
+    <th>Attendance</th>
+    <th>Days journaled</th>
+    <th>Days prayed</th>
+    <th>Attended cell</th>
+    <th>Attended church</th>
+    <th>Assignment one</th>
+    <th>Assignment two</th>
+    <th>Memory verse</th>
+    <th>Test</th>
+    <th>Bible reading</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @student_cards.each do |student_card| %>
+  <tr>
+    <td><%= student_card.student %></td>
+    <td><%= student_card.attendance %></td>
+    <td><%= student_card.days_journaled %></td>
+    <td><%= student_card.days_prayed %></td>
+    <td><%= student_card.attended_cell %></td>
+    <td><%= student_card.attended_church %></td>
+    <td><%= student_card.assignment_one %></td>
+    <td><%= student_card.assignment_two %></td>
+    <td><%= student_card.memory_verse %></td>
+    <td><%= student_card.test %></td>
+    <td><%= student_card.bible_reading %></td>
+    <td><%= link_to 'Show', student_card %></td>
+    <td><%= link_to 'Edit', edit_student_card_path(student_card) %></td>
+    <td><%= link_to 'Destroy', student_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student card', new_student_card_path %>

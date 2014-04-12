@@ -1,0 +1,2 @@
+module CellLeadersHelper
+end

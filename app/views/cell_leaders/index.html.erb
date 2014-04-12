@@ -1,0 +1,27 @@
+<h1>Listing cell_leaders</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cell_leaders.each do |cell_leader| %>
+  <tr>
+    <td><%= cell_leader.name %></td>
+    <td><%= cell_leader.mobile %></td>
+    <td><%= cell_leader.email %></td>
+    <td><%= link_to 'Show', cell_leader %></td>
+    <td><%= link_to 'Edit', edit_cell_leader_path(cell_leader) %></td>
+    <td><%= link_to 'Destroy', cell_leader, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cell leader', new_cell_leader_path %>

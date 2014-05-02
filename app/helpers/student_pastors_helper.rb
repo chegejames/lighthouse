@@ -1,0 +1,2 @@
+module StudentPastorsHelper
+end

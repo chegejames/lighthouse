@@ -1,8 +1,7 @@
-<%= simple_form_for(@student_card) do |f| %>
+<%= simple_form_for([@student, @student_card], :html => { :class => 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.association :student %>
     <%= f.input :attendance %>
     <%= f.input :days_journaled %>
     <%= f.input :days_prayed %>

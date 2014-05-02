@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pastor: 
+  student: 
+  date: 2014-04-18
+
+two:
+  pastor: 
+  student: 
+  date: 2014-04-18

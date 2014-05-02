@@ -1,0 +1,5 @@
+class StudentPastor < ActiveRecord::Base
+  belongs_to :pastor
+  belongs_to :student
+  attr_accessible :date
+end

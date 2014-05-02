@@ -6,7 +6,6 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-#gem 'pg'
 
 
 # Gems used only for assets and not required
@@ -14,9 +13,10 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  #gem 'execjs', '~> 1.4'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+   #gem 'therubyracer', :platforms => :ruby
 
   #gem 'uglifier', '>= 1.0.3'
 end
@@ -37,19 +37,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
-
-group :test do
- # gem 'cucumber-rails'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'simplecov'
-  gem 'rspec-rails', '~> 3.0.0.beta'
-  #gem 'rspec-autotest'
-  #gem 'autotest-rails'
-  gem "autotest", "~> 4.4.2"
- # gem 'capybara'
-end
-
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'

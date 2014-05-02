@@ -1,0 +1,27 @@
+<h1>Listing student_cell_leaders</h1>
+
+<table>
+  <tr>
+    <th>Student</th>
+    <th>Cell leader</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @student_cell_leaders.each do |student_cell_leader| %>
+  <tr>
+    <td><%= student_cell_leader.student %></td>
+    <td><%= student_cell_leader.cell_leader %></td>
+    <td><%= student_cell_leader.date %></td>
+    <td><%= link_to 'Show', student_cell_leader %></td>
+    <td><%= link_to 'Edit', edit_student_cell_leader_path(student_cell_leader) %></td>
+    <td><%= link_to 'Destroy', student_cell_leader, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student cell leader', new_student_cell_leader_path %>

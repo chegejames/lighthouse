@@ -1,0 +1,20 @@
+<%= simple_form_for([@student, @student_card], ) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :attendance %>
+    <%= f.input :days_journaled %>
+    <%= f.input :days_prayed %>
+    <%= f.input :attended_cell %>
+    <%= f.input :attended_church %>
+    <%= f.input :assignment_one %>
+    <%= f.input :assignment_two %>
+    <%= f.input :memory_verse %>
+    <%= f.input :test %>
+    <%= f.input :bible_reading %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

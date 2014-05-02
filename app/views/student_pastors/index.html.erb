@@ -1,0 +1,27 @@
+<h1>Listing student_pastors</h1>
+
+<table>
+  <tr>
+    <th>Pastor</th>
+    <th>Student</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @student_pastors.each do |student_pastor| %>
+  <tr>
+    <td><%= student_pastor.pastor %></td>
+    <td><%= student_pastor.student %></td>
+    <td><%= student_pastor.date %></td>
+    <td><%= link_to 'Show', student_pastor %></td>
+    <td><%= link_to 'Edit', edit_student_pastor_path(student_pastor) %></td>
+    <td><%= link_to 'Destroy', student_pastor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Student pastor', new_student_pastor_path %>

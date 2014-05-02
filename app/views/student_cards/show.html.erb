@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Student:</b>
-  <%= @student_card.student %>
-</p>
-
-<p>
   <b>Attendance:</b>
   <%= @student_card.attendance %>
 </p>
@@ -56,5 +51,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_student_card_path(@student_card) %> |
-<%= link_to 'Back', student_cards_path %>
+<%= link_to 'Edit', edit_student_student_card_path(@student, @student_card) %> |
+<%= link_to 'Back', @student %>

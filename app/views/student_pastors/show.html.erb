@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Pastor:</b>
+  <%= @student_pastor.pastor %>
+</p>
+
+<p>
+  <b>Student:</b>
+  <%= @student_pastor.student %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @student_pastor.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_pastor_path(@student_pastor) %> |
+<%= link_to 'Back', student_pastors_path %>

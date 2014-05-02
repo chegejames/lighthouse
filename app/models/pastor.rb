@@ -1,5 +1,13 @@
+#
+#  This is the model that creates the pastor.
+#  The pastor has attributes email, name and mobile.
+#  All of which should be present and the email unique.
+#
 class Pastor < ActiveRecord::Base
   attr_accessible :email, :mobile, :name
+
+  has_many :student_pastors
+  has_many :students, :through => :student_pastors
 
   validates :email, :mobile, :name, presence: true
 

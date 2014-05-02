@@ -1,11 +1,16 @@
 Lighthouse::Application.routes.draw do
-  resources :student_cards
+  resources :student_cell_leaders
+
+
+  resources :student_pastors
 
 
   resources :cell_leaders
 
 
-  resources :students
+  resources :students do
+    resources :student_cards
+  end
 
 
   resources :pastors
@@ -64,7 +69,7 @@ Lighthouse::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

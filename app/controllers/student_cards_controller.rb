@@ -13,7 +13,10 @@ class StudentCardsController < ApplicationController
   # GET /student_cards/1
   # GET /student_cards/1.json
   def show
-    @student_card = StudentCard.find(params[:id])
+    @student = Student.find(params[:student_id])
+    @student_card = @student.student_cards.find(params[:id])
+
+
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +27,8 @@ class StudentCardsController < ApplicationController
   # GET /student_cards/new
   # GET /student_cards/new.json
   def new
-    @student_card = StudentCard.new
+    @student = Student.find(params[:student_id])
+    @student_card = @student.student_cards.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +38,21 @@ class StudentCardsController < ApplicationController
 
   # GET /student_cards/1/edit
   def edit
-    @student_card = StudentCard.find(params[:id])
+    @student = Student.find(params[:student_id])
+    @student_card = @student.student_cards.find(params[:id])
+
   end
 
   # POST /student_cards
   # POST /student_cards.json
   def create
-    @student_card = StudentCard.new(params[:student_card])
+    @student = Student.find(params[:student_id])
+    @student_card = @student.student_cards.build(params[:student_card])
+
 
     respond_to do |format|
       if @student_card.save
-        format.html { redirect_to @student_card, notice: 'Student card was successfully created.' }
+        format.html { redirect_to [@student, @student_card], notice: 'Student card was successfully created.' }
         format.json { render json: @student_card, status: :created, location: @student_card }
       else
         format.html { render action: "new" }
@@ -56,11 +64,13 @@ class StudentCardsController < ApplicationController
   # PUT /student_cards/1
   # PUT /student_cards/1.json
   def update
-    @student_card = StudentCard.find(params[:id])
+    @student = Student.find(params[:student_id])
+    @student_card = @student.student_cards.find(params[:id])
+
 
     respond_to do |format|
       if @student_card.update_attributes(params[:student_card])
-        format.html { redirect_to @student_card, notice: 'Student card was successfully updated.' }
+        format.html { redirect_to [@student,@student_card], notice: 'Student card was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,11 +82,12 @@ class StudentCardsController < ApplicationController
   # DELETE /student_cards/1
   # DELETE /student_cards/1.json
   def destroy
-    @student_card = StudentCard.find(params[:id])
+    @student = Student.find(params[:student_id])
+    @student_card = @student.student_cards.find(params[:id])
     @student_card.destroy
 
     respond_to do |format|
-      format.html { redirect_to student_cards_url }
+      format.html { redirect_to @student }
       format.json { head :no_content }
     end
   end

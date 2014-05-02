@@ -1,0 +1,5 @@
+class StudentCellLeader < ActiveRecord::Base
+  belongs_to :student
+  belongs_to :cell_leader
+  attr_accessible :date
+end

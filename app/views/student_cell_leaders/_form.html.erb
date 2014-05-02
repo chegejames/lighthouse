@@ -1,0 +1,13 @@
+<%= simple_form_for(@student_cell_leader) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :student %>
+    <%= f.association :cell_leader %>
+    <%= f.input :date %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

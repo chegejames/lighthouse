@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140411223110) do
+ActiveRecord::Schema.define(:version => 20140418062212) do
 
   create_table "cell_leaders", :force => true do |t|
     t.string   "name"
@@ -46,6 +46,28 @@ ActiveRecord::Schema.define(:version => 20140411223110) do
   end
 
   add_index "student_cards", ["student_id"], :name => "index_student_cards_on_student_id"
+
+  create_table "student_cell_leaders", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "cell_leader_id"
+    t.date     "date"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "student_cell_leaders", ["cell_leader_id"], :name => "index_student_cell_leaders_on_cell_leader_id"
+  add_index "student_cell_leaders", ["student_id"], :name => "index_student_cell_leaders_on_student_id"
+
+  create_table "student_pastors", :force => true do |t|
+    t.integer  "pastor_id"
+    t.integer  "student_id"
+    t.date     "date"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "student_pastors", ["pastor_id"], :name => "index_student_pastors_on_pastor_id"
+  add_index "student_pastors", ["student_id"], :name => "index_student_pastors_on_student_id"
 
   create_table "students", :force => true do |t|
     t.string   "name"

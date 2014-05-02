@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student:</b>
+  <%= @student_cell_leader.student %>
+</p>
+
+<p>
+  <b>Cell leader:</b>
+  <%= @student_cell_leader.cell_leader %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @student_cell_leader.date %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_cell_leader_path(@student_cell_leader) %> |
+<%= link_to 'Back', student_cell_leaders_path %>
